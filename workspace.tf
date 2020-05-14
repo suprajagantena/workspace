@@ -15,7 +15,7 @@ resource "aws_subnet" "private-b" {
 }
 
 resource "aws_directory_service_directory" "main" {
-  name     = "corp.example.com"
+  name     = "corp.workspace.com"
   password = "#S1ncerely"
   size     = "Small"
   vpc_settings {
