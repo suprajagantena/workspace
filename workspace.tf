@@ -1,17 +1,17 @@
 resource "aws_vpc" "main" {
-  cidr_block = "10.0.2.0/16"
+  cidr_block = "192.0.0.0/16"
 }
 
 resource "aws_subnet" "private-a" {
   vpc_id            = "${aws_vpc.main.id}"
   availability_zone = "us-east-1a"
-  cidr_block        = "10.0.2.0/24"
+  cidr_block        = "192.0.0.0/24"
 }
 
 resource "aws_subnet" "private-b" {
   vpc_id            = "${aws_vpc.main.id}"
   availability_zone = "us-east-1b"
-  cidr_block        = "10.2.1.0/24"
+  cidr_block        = "192.0.1.0/24"
 }
 
 resource "aws_directory_service_directory" "main" {
